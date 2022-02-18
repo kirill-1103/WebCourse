@@ -1,0 +1,11 @@
+extends layout
+
+block content
+    div(class='div-auth')
+        h2 Вы уже зашли как #{name}
+        form(action='/users/exit' method='post')
+            div(class='auth-input')
+                input(type='submit' value='Выйти')
+        form(action='/library' method = 'get')
+            div(class='auth-input')
+                input(type='submit' value='Перейти в библиотеку')

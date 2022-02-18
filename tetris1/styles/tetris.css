@@ -1,0 +1,38 @@
+html{
+    overflow: hidden;
+}
+
+#rules{
+    font-size:13px;
+    margin-left:-30px;
+}
+
+#div_main_canvas{
+    position:relative;
+    top:-800px;
+    left:37vw;
+    width:26vw;
+    height:600px;
+
+}
+
+#main_canvas{
+    /*width:26vw;*/
+    /*height:52vw;*/
+}
+
+#left_div{
+    width : 20vw;
+    height: 800px;
+}
+
+#div_music{
+    position:relative;
+    top:-1400px;
+    width:20vw;
+    left:75vw;
+}
+
+
+
+

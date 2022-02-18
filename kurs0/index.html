@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>GAME</title>
+            <script type="text/javascript" src="managers/SpriteManager.js"></script>
+            <script type="text/javascript" src="objects.js"></script>
+            <script type="text/javascript" src="managers/PhysicManager.js"></script>
+            <script type="text/javascript" src="managers/MapManager.js"></script>
+            <script type="text/javascript" src="managers/EventsManager.js"></script>
+            <script type="text/javascript" src="managers/SoundManager.js"></script>
+
+            <script type="text/javascript" src="managers/GameManager.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+    <body>
+        <div id="title-name"></div>
+        <div class="canvas">
+            <canvas id="mapCanvas" width='1200' height="600">ваш браузер не поддерживает canvas</canvas>
+        </div>
+        <div id="info">
+            <p id="score_p">Количество очков: 0</p>
+            <p id="time_p">Время: 00:00:00</p>
+            <button onclick="onLevels()">Уровни</button>
+            <button id = "btn_pause" onclick="onPause()">Пауза</button>
+            <button onclick="onReplay()">Заново</button>
+        </div>
+
+
+        <div id="modal">
+            <div id="in_modal">
+                <h2 id="info_h3">Вы выиграли!</h2>
+                <h3 id="score_h">Количество очков: </h3>
+                <button onclick="onCloseModal()">OK</button>
+            </div>
+        </div>
+    </body>
+
+    <script type="text/javascript" src="index.js"></script>
+
+</html>

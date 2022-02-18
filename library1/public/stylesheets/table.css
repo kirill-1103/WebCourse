@@ -1,0 +1,58 @@
+.table-books-div{
+    text-align: center;
+    margin:auto;
+    z-index: 0;
+    width:80%;
+}
+
+.books-table{
+    border:1px solid white;
+    padding:20px;
+    border-radius: 20px;
+    background-color: rgb(236,197,249);
+    color:#c4145d;
+    width: 100%;
+    border-collapse: collapse;/*убираем двойные линии*/
+}
+
+
+.books-table th{
+    font-size:20px;
+    padding:10px;
+    outline: none;
+}
+
+.books-table td{
+    font-size:15px;
+    padding:20px;
+    border-bottom: 2px solid #E1CFE1;
+}
+
+.books-table td:hover{
+    cursor: pointer;
+}
+
+.books-table tr+tr{
+    background-color:#de96e2;
+}
+.books-table tr+tr:hover{
+    background: #d298fd;
+}
+
+.div-filter{
+    width: 100%;
+}
+.div-filter input{
+    width: 33%;
+    border:1px solid white;
+    border-top:none;
+    font-weight: bold;
+    background:#9F56F7;
+    color:white;
+    padding:20px;
+    margin-top:-16px;
+}
+
+.div-filter input:hover{
+    cursor: pointer;
+}

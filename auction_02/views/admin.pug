@@ -1,0 +1,44 @@
+extends layout
+
+block content
+    div.w3-row-padding.w3-border
+        div.w3-container.w3-third.s4
+            h3.w3-center Участники
+            div#admin_participants.admin_div
+                ul.w3-ul.w3-hoverable
+                    for val in participants
+                        li
+                            p Имя: #{val.name}
+                            p(id=`balance_${val.id}`) Запас средств: #{val.money}
+        div.w3-container.w3-third.s4
+            h3.w3-center Картины
+            div#admin_pictures.admin_div
+                for val in pictures
+                    h3 #{val.name}
+                    div
+                        p.p_img
+                            img(src=`${val.src}`)
+                        p Автор: #{val.author}
+                        p(id=`min_price_${val.id}`) Минимальная цена: #{val.start_price}
+                        p(id=`temp_price_${val.id}`) Текущая цена: #{val.temp_price}
+                        p(id= `buyer_${val.id}`) Предложил: #{val.buyer}
+                        if val.buy===''
+                            p(id=`buy_${val.id}`) Картина еще не продана
+                        else
+                            p Продана: #{val.buy}
+                        p Описание: #{val.description}
+
+
+        div(style='height:100%').w3-container.w3-third.s4
+            h3 Информация
+            div#admin_window.admin_div
+                div(style='height:150px')#admin_time.w3-container.w3-blue-gray
+                    p#time_end_auction До конца аукциона:
+                    p#time_end_picture
+                div(style='height:600px')#chat.w3-container.w3-border-aqua.w3-pale-blue
+                div(style='width:100%')#admin_button.w3-container.w3-center
+                    input(type='button' value='Начать аукцион').w3-button.w3-block.w3-cyan#button_start_auction
+
+
+
+        script(src= '/bundle.js')

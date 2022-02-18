@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <div class="login">
+<!--        <form action="./start.html">-->
+            <input id='nameInput' type="text" placeholder="NAME">
+            <button id='btn_log' onclick = 'onLogin()'>OK</button>
+<!--        </form>-->
+    </div>
+    <script>
+        if(localStorage['player']) {
+            document.getElementById('nameInput').value = localStorage['player'];
+        }
+        function onLogin(){
+           let name = document.getElementById('nameInput').value;
+           if(name.length>0){
+               localStorage['player']=name;
+               document.location.href='./start.html';
+           }else{
+               alert('Введите имя')
+           }
+
+        }
+    </script>
+</body>
+</html>

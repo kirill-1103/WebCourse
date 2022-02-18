@@ -1,0 +1,26 @@
+extends layout
+
+block content
+
+  div.login
+    div.w3-container
+      h2.w3-center Вход
+      div.w3-card-4
+        div.w3-container.w3-cyan
+          h2.w3-text-white Введите логин
+        form(method='post' action='/user').w3-container
+          p
+            input(type='text' name='login').w3-input#login_input
+            label.unselectable Логин
+          p.w3-center
+            input(type='submit' value='OK').w3-button.w3-cyan
+      if(notFound)
+        p.w3-center
+        h4.w3-red.w3-text-white.w3-border-black Введено неверное имя пользователя!
+
+
+
+  script(src= '/bundle.js')
+
+
+

@@ -1,0 +1,57 @@
+@max_width:100%;
+@color_href:#293440;
+@color_href_hover:#295F6F;
+@color_href_main:#000;
+@color_header_1:#fe7300;
+@color_header_2:#f9fa04;
+
+header{
+  position:fixed;
+  height:80px;
+  width:100%;
+  z-index: 1;
+  top:0;
+  background:linear-gradient(to right,@color_header_1,@color_header_2);
+  & h2{
+    position: fixed;
+    padding-left:10%;
+    width:100px;
+    color:@color_href;
+  }
+}
+
+.to-page{
+  text-decoration: none; //убрать подчеркивание
+  color:@color_href;
+  font-size:30px;
+  font-family: fantasy;
+  &:hover{
+    color:@color_href_hover ;
+  }
+
+  &#to_page_main{
+    color:@color_href_main ;
+    font-weight: bold;
+    &:hover{
+      color:@color_href_hover ;
+    }
+  }
+}
+
+#header-nav{
+  position:fixed;
+  width:80%;
+  display: flex;
+  margin-left:40%;
+}
+
+
+#nav_list{
+  list-style: none;
+  margin:0;
+  padding:20px;
+  & li{
+    display: inline;
+    margin-right:6%;
+  }
+}

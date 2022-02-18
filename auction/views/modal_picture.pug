@@ -1,0 +1,54 @@
+div.modal#modal
+    div.modal-content
+        form#form_edit_picture
+            div.modal-header
+                span(onclick = '$("#modal").css("display","none")').close-span x
+                h2#h2_name_picture.view-picture
+                //input(name='name' type='text' autocomplete="off" placeholder='Название')#input_picture_name.edit-picture
+
+            div.modal-body
+                div.img-div
+                    img#img_in_modal.view-picture
+
+                span.edit-picture Название:
+                    input(name='name' type='text' autocomplete="off" placeholder='Название')#input_picture_name
+                span.edit-picture#label_img_src Изображение (если нужно поменять):
+                    input(type='file' autocomplete="off" name='img-src' accept='.jpg')#input_picture_src
+
+                p#author_in_modal.view-picture Автор:
+                span.edit-picture Автор:
+                    input(name='author' type='text' autocomplete="off" placeholder='Автор')#input_picture_author
+
+                p#start_price_in_modal.view-picture Начальная цена:
+                span.edit-picture Начальная цена:
+                    input(name='start_price' autocomplete="off" type='number' placeholder='Начальная цена')#input_start_price
+
+                p#min_step_in_modal.view-picture Минимальный шаг аукциона:
+                span.edit-picture Минимальный шаг аукциона:
+                    input(name='min_step'  autocomplete="off" type='number' placeholder='Минимальный шаг аукциона')#input_min_step
+
+                p#max_step_in_modal.view-picture Максимальный шаг аукциона:
+                span.edit-picture Максимальный шаг аукциона:
+                    input(name='max_step' autocomplete="off" type='number' placeholder='Максимальный шаг аукциона')#input_max_step
+
+                p#in_auction_in_modal.view-picture Учавствует в аукционе:
+                span.edit-picture Учавствует в аукционе:
+                    input(name='in_auction' type='checkbox' autocomplete='off')#input_in_auction
+
+                p#description_in_modal.view-picture Описание:
+                span.edit-picture Описание:
+                    textarea(name='description' autocomplete="off" placeholder='Описание')#input_description
+
+                div.btn-div.view-picture
+                    input(type='button' value='Редактировать')#edit-image
+                div.btn-div.edit-picture
+                    input(type='button' value='ОК')#ok
+                    input(type='button' value='Отмена')#cancel
+                    input(type='button' style='display:none' value='OK')#ok_new_picture
+                    input(type='button' style='display:none' value='Отмена')#cancel_new_picture
+
+        div(style='display:none')#div-warn
+            p(style='color:red') Не все поля заполненны или заполненны неверно
+
+include big-img
+include delet-context

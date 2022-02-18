@@ -1,0 +1,13 @@
+#!/usr/bin/env node
+const https = require('https');
+const http = require('http');
+const app = require('../app');
+const fs = require('fs');
+let httpsOptions = {
+    key: fs.readFileSync('/home/kirill/var/www/auction/ssl/server.key'),//путь к ключу
+    cert: fs.readFileSync('/home/kirill/var/www/auction/ssl/server.crt'),//путь к сертификату
+}
+http.createServer(app).listen(3001);
+let port = 8443;
+return https.createServer(httpsOptions,app).listen(port);
+

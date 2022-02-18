@@ -1,0 +1,35 @@
+extends layout
+block content
+    div(class='div-auth')
+        h2 Регистрация
+        form(id="signup_form" action="/users/signup" method='post' onsubmit='return validate_form();')
+            div(class='auth-input')
+                input(name="login" id="su_login" placeholder="Логин" type="text" )
+                p(class = 'warning' id ='label_after_login')
+            br
+            div(class='auth-input')
+                input(name="username" id="su_username" placeholder="Имя" type="text" )
+            br
+            div(class='auth-input')
+                input(name="userLastName" id="su_lastname" placeholder="Фамилия" type="text" )
+            br
+            div(class='auth-input')
+                input(name="password" id="su_password" placeholder="Пароль" type="password" )
+                p(class='warning' id ='label_after_password')
+            br
+            div(class='auth-input')
+               label Введите вашу дату рождения:
+               input(name="date" id="su_birthday" type="date" )
+            br
+            div(class='auth-input')
+                input(name="genre" id="su_genre" type="text" placeholder="Любимый жанр" )
+            br
+            div(class='auth-input ')
+                input(type="submit" id = "button_signup" class = 'button-input' value='Зарегистрироваться')
+            if(wrongName)
+                div(class='auth-input ')
+                    p(class = 'warning') Пользователь с таким логином уже существует!
+            br
+            label(id='not_all_fields_are_full_label' class='warning')
+            script
+                include ../public/javascripts/signupChecked.js

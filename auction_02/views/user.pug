@@ -1,0 +1,36 @@
+extends layout
+
+block content
+    div.w3-row-padding.w3-border
+        div.w3-container.w3-third.s4
+            h3.w3-center Баланс
+            div.user_money
+                h3.w3-center#balance #{participant.money}
+        div.w3-container.w3-third.s4
+            h3.w3-center Текущая картина
+            div#user_picture.admin_div.w3-hide.w3-teal.w3-padding
+                p.p_img.w3-center
+                    img(style='height:400px;width:400px;')#user_image.w3-center
+                p#user_name Название:
+                p#user_author Автор:
+                p#user_start Минимальная цена:
+                p#user_temp Текущая цена:
+                p#user_buyer Предложил:
+                p#user_description Описание:
+        div(style='height:100%').w3-container.w3-third.s4
+            h3 Информация
+            div#admin_window.admin_div
+                form(method='post' action='/admin/start')
+                    div(style='height:150px')#admin_time.w3-container.w3-blue-gray
+                        p#time_end_auction До конца аукциона:
+                        p#time_end_picture
+                    div(style='height:560px')#chat.w3-container.w3-border-aqua.w3-pale-blue
+                    div(style='width:100%')#admin_button.w3-container.w3-center
+                        input(name='price')#new_price
+                        input(type='button'  value='Предложить цену').w3-button.w3-block.w3-cyan#new_price_button
+    div(style='width:100%')
+        div.w3-center
+            form(action=`/users/my_pictures/${participant.id}` method='get')
+                input(type='submit' value='Мои картины' ).w3-btn.w3-teal.w3-center
+
+    script(src= '/bundle.js')

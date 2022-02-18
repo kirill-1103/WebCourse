@@ -1,0 +1,19 @@
+
+.admin_div{
+    height: 800px;
+}
+#admin_participants{
+    overflow-y: scroll;
+}
+#admin_pictures{
+    overflow-y: scroll;
+}
+
+.p_img > img{
+    width:250px;
+    height:250px;
+}
+
+#chat{
+    overflow-y: scroll;
+}

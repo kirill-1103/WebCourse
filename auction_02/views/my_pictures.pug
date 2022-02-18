@@ -1,0 +1,17 @@
+extends layout
+
+block content
+    div#pictures(style='width:700px;height:800px;overflow-y:scroll;border:3px solid aqua;margin:30px auto auto auto').w3-center
+        ul#my_pictures.w3-ul
+            for val in my_pictures
+                li
+                    div.w3-teal
+                        h2.w3-center Название: #{pictures[val].name}
+                        img(src=pictures[val].src style='width:600px;height:600px;').w3-center
+                        p Куплена за: #{pictures[val].temp_price}
+    div.w3-center
+        form(method='get' action=`/users/${id}`)
+            input(type='submit' value='К аукциону').w3-button.w3-text-white.w3-teal
+
+
+    script(src= '/bundle.js')

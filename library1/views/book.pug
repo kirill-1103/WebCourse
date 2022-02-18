@@ -1,0 +1,97 @@
+extends layout
+block content
+    link(rel='stylesheet' href='/stylesheets/book.css')
+    link(rel='stylesheet' href='/stylesheets/modal.css')
+    div(class='book' id='book')
+        div(class='book-card' id='book_card')
+            p(id='book_title_label') Название:
+                span  #{book.name}
+            p(id='book_author_label') Автор:
+                span  #{book.author}
+            p(id="book_date_label") Дата выпуска:
+                span  #{book.date}
+            if(book.date_back!=='')
+                p(id="book_date_back_label") Дата возврата:
+                    span  #{book.date_back}
+            if book.in_stock === ''
+                p(id="book_in_stock_label")
+                    span Книга имеется в наличии.
+            else
+                p(id="book_in_stock_label") Книги нет в наличии.
+                p Читатель:
+                    span  #{book.in_stock}
+        if book.in_stock === ''
+            input(id='button_take' type = 'submit' onclick='document.getElementById("modal").style.display="block";' +
+            'document.getElementById(\'wrong_reader_p\').innerHTML=""' value='Дать читателю')
+        else
+            form(action=`/library/books/return/${book.id}` method='post')
+                input(id='button_return' type='submit' value='Вернуть в библиотеку')
+        br
+        input(id='button_edit_book' type = 'submit' value='Редактировать карточку книги' onclick='to_book_edit()')
+
+    div(class='book' id='book_edit')
+        div(class='book-card' id='book_card_edit')
+            form(action=`/library/books/edit/${book.id}_book` method='post')
+                p Название:
+                    input(type='text' placeholder='Название' name='name' value=`${book.name}`)
+                p Автор:
+                    input(type='text' placeholder='Автор' name='author' value=`${book.author}`)
+                p Дата выпуска:
+                    input(type='date' name='date' value=`${book.date}` )
+                if(book.date_back !== '')
+                    p Дата возврата:
+                        span  #{book.date_back}
+                if book.in_stock === ''
+                    p
+                        span Книга имеется в наличии.
+                else
+                    p Книги нет в наличии.
+                    p Читатель:
+                        span  #{book.in_stock}
+                p(class='warning' id='wrong_book_p')
+                input(type='submit' value='OK')
+            input(type='submit' value='Отмена' onclick='to_book()')
+
+    if wrongBook
+        script.
+            document.getElementById('book').style.display='none';
+            document.getElementById('book_edit').style.display='block';
+            document.getElementById('wrong_book_p').innerHTML = 'Введены неверные значения книги!'
+    script.
+        let book = document.getElementById('book');
+        let book_edit = document.getElementById('book_edit');
+        function to_book(){book.style.display='block';book_edit.style.display='none'}
+        function to_book_edit(){book.style.display='none';book_edit.style.display='block'}
+
+
+
+            //модальное окно
+    div(id="modal" class='modal')
+        div(class='modal-content')
+            div(class='modal-header')
+                span(class='close-span' onclick="document.getElementById('modal').style.display='none'") x
+                h2 Введите информацию пользователя
+            div(class='modal-body')
+                form(action=`/library/books/edit/${book.id}`, method='post')
+                    input(type='text' placeholder='ФИО' name='in_stock')
+                    br
+                    label Дата возврата:
+                        br
+                        input(type='date' name='date_back')
+                    br
+                    input(type='submit' class='modal-button' value='OK')
+                    p(class='warning' id ='wrong_reader_p')
+
+    script.
+        let modal = document.getElementById('modal');
+        window.onclick = function(event){
+            if(event.target==modal){
+                modal.style.display='none';
+            }
+        }
+    if wrongReader
+        script.
+            document.getElementById('modal').style.display='block';
+            document.getElementById('wrong_reader_p').innerHTML = 'Введены неверные значения читателя!'
+
+

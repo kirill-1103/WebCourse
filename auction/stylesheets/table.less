@@ -1,0 +1,107 @@
+@content-background-color:#fdf8dc;
+@border-table:2px solid #feac00;
+.offset(@padding:0,@margin:0){
+  padding:@padding;
+  margin:@margin;
+}
+.size(@height:auto,@width:auto){
+  height:@height;
+  width:@width;
+}
+.BLOCK(){
+  display: block;
+}
+.min_table_width{
+  min-width:600px;
+}
+
+.image-in-table{
+  .offset(0,0);
+  .size(150px,200px)
+}
+
+
+.div-table{
+  text-align: center;
+  .offset(0,55px auto auto  auto);
+  z-index: 0;
+  width: 80%;
+  border: @border-table;
+  border-bottom: none;
+}
+
+.div-table-body{
+  height:600px;
+  margin-top:0px;
+  overflow-x: auto;
+  border-bottom:@border-table;
+}
+
+.div-table{
+  & table{
+    width:100%;
+    table-layout:fixed;
+    border:none;
+    border-collapse: collapse;/*убираем двойные линии*/
+    color:black;
+    font-family: "DejaVu Sans Mono";
+  }
+  & th{
+    font-weight: bold;
+    text-align: center;
+    border:none;
+    padding:10px 15px;
+    background:yellow;
+    font-size:15px;
+  }
+  & td{
+    //text-align: left;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    font-size:15px;
+    vertical-align: center;
+    text-align: center;
+  }
+}
+
+.body-table{
+  & tr{
+    background:@content-background-color;
+  }
+  & tr:nth-child(even){
+    background:#FAEBA0;
+  }
+  & tr:hover{
+    background-color:#cbb17c;
+    cursor: pointer;
+  }
+  & tr:focus{
+    background-color:#a38241;
+  }
+}
+
+.picture-div{
+  min-width:1500px;
+}
+
+.id{
+  display: none;
+}
+
+.div_add{
+  width:100%;
+  text-align: center;
+}
+.button_add{
+  margin:0 auto;
+  font-family: "Bitstream Charter";
+  width:400px;
+  height:50px;
+  background-color: #df7839;
+  color: #000;
+  &:hover{
+    cursor: pointer;
+    background-color: #a3826f;
+  }
+}
+

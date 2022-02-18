@@ -1,0 +1,16 @@
+doctype html
+html
+  head
+    link(rel='stylesheet', href='../css/style.min.css')
+    script(src='../js/jquery/jquery-3.6.0.js')
+  body(style='padding:0;margin:0')
+    div#main_header
+      include header.pug
+    //form(method='get' action='/auction')
+    //  input(type='submit' value='auction')
+    //form(method='get' action='/settings')
+    //  input(type='submit' value='settings')
+    //form(method='get' action='participants')
+    //  input(type='submit' value='participants')
+    div.content
+      block content

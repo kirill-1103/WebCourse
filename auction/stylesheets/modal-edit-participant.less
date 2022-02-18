@@ -1,0 +1,51 @@
+.size(@width,@height){
+  width:@width;
+  height:@height;
+}
+
+#modal-edit-participant{
+  position:fixed;
+  left:0;
+  top:80px;
+  .size(100%,100%);
+  background: rgba(0,0,0,0.7);
+  display:none;
+}
+#div-edit-participant{
+  .size(420px,220px);
+  background-color: rgba(252,206,168,0.2) ;
+  position:relative;
+  margin:300px auto;
+  z-index: 1;
+  padding:20px;
+
+}
+#text-in-edit-participant{
+  width:100%;
+  & input{
+    width:100%;
+    height:70px;
+    font-size:22px;
+    background-color:#dddddd;
+    color:#91200f;
+    margin-top:10px;
+  }
+}
+
+#buttons-in-edit-participant{
+  width:100%;
+  margin-left:3px;
+  & input{
+    width:205px;
+    height:50px;
+    font-size:22px;
+    position:relative;
+    margin-top:10px;
+    &:hover{
+      cursor: pointer;
+    }
+  }
+  & input + input{
+    margin-left:10px;
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Records</title>
+</head>
+<body>
+    <div id="div_records">
+        <label>Таблица рекордов:</label>
+        <ol id="records" >
+            <li id="record_1">.................</li>
+            <li id="record_2">.................</li>
+            <li id="record_3">.................</li>
+            <li id="record_4">.................</li>
+            <li id="record_5">.................</li>
+            <li id="record_6">.................</li>
+            <li id="record_7">.................</li>
+            <li id="record_8">.................</li>
+            <li id="record_9">.................</li>
+            <li id="record_10">.................</li>
+        </ol>
+        <form action = "../index.html">
+            <button id="button_go_to_start" type="submit">Страница входа</button>
+        </form>
+    </div>
+    <script >
+        for(let i = 0 ;i<10;i++){
+                let record_s = document.getElementById(`record_${i+1}`);
+                let record_value = localStorage.getItem(`record_${i}`);
+                if(record_value===null || record_value==='null'){
+                    record_value = STR_DOTS;
+                }
+                record_s.innerHTML = record_value;
+            }
+        localStorage["user.back"] = localStorage['tetris.user'];
+    </script>
+</body>
+</html>

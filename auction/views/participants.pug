@@ -1,0 +1,30 @@
+extends layout
+
+block content
+    div.div_h1_participants
+        h1 Участники
+    div.picture-div
+        div.div-table(style='width:650px;')
+            table.unselectable
+                thead
+                    tr#main_participants_row
+                        th Участник
+                        th Запас денежных средств
+            div(style='height:500px').div-table-body.unselectable
+                table#body_participants_table.body-table
+                    tbody
+            div(style='height:60px').div-participant-input.unselectable.div-table-body#div-table-body-participant
+                table()#table_add_participant.body-table
+                    tbody
+                        tr.participants-tr#participants-input-tr
+                            form#form_add_new_participant
+                                td.participants-name
+                                    input(type='text' name='name' placeholder='Имя участника').input-participant#input_participant_name
+                                td.participants-money
+                                    input(type='number' name='money' placeholder='Запас средств').input-participant#input_participant_money
+        div#div_add_new_participant.div_add
+            input(type='button' value='Добавить участника')#button_add_new_participant.button_add
+    script(src='../js/script.min.js')
+
+    include contextmenu-participant
+    include modal-edit-participant

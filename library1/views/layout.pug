@@ -1,0 +1,35 @@
+doctype html
+html
+  head
+    title Library
+    link(rel='stylesheet' href='/stylesheets/style.css' )
+    link(rel='stylesheet' href='/stylesheets/header.css')
+    link(rel='stylesheet' href='/stylesheets/authentication.css')
+  body
+    header(class='main-header unselectable' )
+      div(class = 'header-logo')
+        img(src = '/img/logo.jpeg' class='header-img')
+      div(class='header-text')
+        h1(class='main-h1')
+          a(href='http://localhost:3000/library' class='header-link') LIBRARY
+      div(class='header-exit')
+        if is_authorized
+          form(action='/users/exit' method='post' id='form_exit')
+            span(class = 'span-exit' onclick='onClickExit()' id='label_exit') ВЫЙТИ
+        else
+          if login
+            form(action='/users/signup' method='get' id = 'form_to_signup')
+              span(class = 'span-exit' onclick='onClickToSignup()' id='to_signup') Регистрация
+          else
+            form(action='/users/login' methon='get' id='form_to_login')
+              span(class = 'span-exit' onclick='onClickToLogin()' id='to_login') Войти
+
+    script.
+              function onClickExit(){document.getElementById('form_exit').submit()}
+              function onClickToSignup(){document.getElementById('form_to_signup').submit()}
+              function onClickToLogin(){document.getElementById('form_to_login').submit()}
+
+
+    div(class='content')
+      block content
+

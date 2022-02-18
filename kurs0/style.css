@@ -1,0 +1,196 @@
+#mapCanvas{
+    /*border:1px solid black;*/
+    /*background: silver;*/
+}
+html{
+    /*width: 100%;*/
+}
+body{
+    /*width: 100%;*/
+    background-image: url("sprites/kiripich-stena-fon.jpg");
+}
+.canvas{
+    display: inline-block;
+    width: 75%;
+    margin:100px 0 0 -50px;
+    text-align: center;
+    background:none;
+    border: none;
+    float:left;
+}
+
+div{
+    padding:20px;
+    text-align: center;
+    border: 1px solid black;
+    background-color: rgb(217, 152, 124);
+}
+
+.login{
+    padding:20px;
+    text-align: center;
+    width:300px;
+    height:170px;
+    border: 1px solid black;
+    background-color: rgb(217, 152, 124);
+    margin:300px auto auto auto;
+}
+.login input{
+    width: 100%;
+    height:70px;
+    background: none;
+    font-size:30px;
+    text-align: center;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.login button{
+    width: 100%;
+    height:70px;
+    font-size: 30px;
+    background: none;
+    color:white;
+}
+.login button:hover{
+    background-color: brown;
+    cursor: pointer;
+}
+
+.level{
+    margin:100px 0 0 400px;
+    float:left;
+    width:300px;
+    height:400px;
+    color: #601b02;
+
+}
+.records{
+    margin:100px 0 0 400px;
+    width:450px;
+    height:469px;
+    float: left;
+    color: #601b02;
+}
+
+.form_radio_btn{
+    margin-right: 30px;
+    padding:10px;
+    border: none;
+}
+.form_radio_btn input[type=radio]{
+    display: none;
+}
+.form_radio_btn label{
+    display: inline-block;
+    cursor: pointer;
+    padding:0px 15px;
+    line-height: 60px;
+    border: 1px solid white;
+    border-radius: 6px;
+    user-select: none;
+    width: 100%;
+    height:60px;
+    font-size: 30px;
+}
+
+.form_radio_btn input[type=radio]:checked + label {
+    background: #ffe0a6;
+}
+
+.form_radio_btn label:hover {
+    color: #666;
+}
+
+.play{
+    width:100%;
+    margin-left:17px;
+    height: 60px;
+    border-radius: 6px;
+    border:1px solid white;
+    color:navajowhite;
+    font-size:30px;
+    background-color: rgb(225, 92, 56);
+}
+
+.play:hover{
+    cursor: pointer;
+    background-color: navajowhite;
+    color:rgb(225, 92, 56)
+}
+
+#table-records{
+    margin-left: -40px;
+    border-spacing: 9px;
+}
+#table-records td{
+    width:300px;
+    font-size: 25px;
+}
+
+#title-name{
+    background: none;
+    border:none;
+    font-size: 40px;
+    font-weight: bold;
+    background-color: #601b02;
+    color: white;
+}
+
+#info{
+    display: inline-block;
+    border:none;
+    background-color: #ffe0a6;
+    width:370px;
+    height:180px;
+    float:left;
+    margin-top:120px;
+    color:#601b02;
+    font-size: 25px;
+}
+
+#info button{
+    width:31%;
+    height:40px;
+    background:#601b02;
+    color:#ffe0a6;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+#info button:hover{
+    cursor:pointer;
+    background-color: #ffe0a6;
+    color:#601b02;
+}
+
+#modal{
+    position:fixed;
+    width:100%;
+    height:100%;
+    background-color: rgba(61, 21, 8, 0.8);
+    border:none;
+    display:none;
+}
+
+#in_modal{
+    background-color: #ffe0a6;
+    border:none;
+    margin:auto;
+    width:300px;
+}
+
+#in_modal button{
+    width:60%;
+    height:50px;
+    background-color: #601b02;
+    color:#ffe0a6;
+    font-weight: bold;
+    font-size:25px;
+}
+
+#in_modal button:hover{
+    cursor: pointer;
+    background-color: #ffe0a6;
+    color: #601b02;
+}

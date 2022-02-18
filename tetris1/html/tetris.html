@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tetris</title>
+    <link href="../styles/tetris.css?version=7" rel="stylesheet" type="text/css"/>
+</head>
+
+<body style = "height:700px;">
+    <div style="text-align: center;">
+        <h1>ТЕТРИС</h1>
+    </div>
+    <div id = "left_div" >
+        <h2 id = "name_user">Игрок:</h2>
+        <div>
+            <label>Следующая фигура:</label> <br><br>
+            <canvas id="canvas_next_shape"></canvas>
+        </div>
+        <div>
+            <br><label>Клавиши управления:</label>
+            <ul id="rules">
+                <li>Стрелка влево - перемещение фигуры влево</li>
+                <li>Стрелка вправо - перемещение фигуры вправо</li>
+                <li>Стрелка вниз - "уронить" фигуру</li>
+                <li>Стрелка вверх - повернуть фигуру</li>
+            </ul>
+        </div>
+    </div>
+
+    <div id ="div_main_canvas">
+        <canvas id="main_canvas"></canvas>
+        <label style="color:red" id = "score">Количество очков: 0</label>
+    </div>
+
+    <div id = "div_music">
+        <button id="button_go_to_start">Страница входа</button>
+
+        <div id="audio">
+            <label for="music_checkbox">Музыка</label><input onchange = "onOffMusic()" type="checkbox" id="music_checkbox"/>
+            <label for="value_range" id="label_range">Громкость</label><input type="range" min="0" max="100" step="1" value="50" id="value_range" oninput="volumeChange()"/>
+        </div>
+    </div>
+
+    <audio src="../sounds/main_sound.mp3" id    ="main_sound"></audio>
+    <audio src="../sounds/row_sound.mp3" id     ="row_sound"></audio>
+
+    <script src = '../scripts/information.js?version=6'></script>
+    <script src = '../scripts/tetris.js?version=6'></script>
+    <script src = '../scripts/field.js?version=6'></script>
+    <script src = "../scripts/userActions.js?version=6"></script>
+
+</body>
+
+
+</html>

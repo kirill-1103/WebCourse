@@ -1,0 +1,60 @@
+.div-auth{
+    position:absolute;
+    width:500px;
+    top:56%;
+    left:50%;
+    transform: translate(-50%,-50%); /*смещение точки начала координат в центр*/
+    background: rgba(48,7,82,0.8);
+    padding: 2px 2px;
+}
+
+.div-auth h2{
+    margin: 30px 100px;
+    padding:0;
+    text-align: center;
+    color:#ffffff;
+    font-size:24px;
+}
+
+.auth-input label{
+    color:white;
+    margin-left:-135px;
+}
+
+.auth-input{
+    margin:10px 40px;
+    text-align: center;
+}
+
+.auth-input input{
+    background:none;
+    width: 100%;
+    color:white;
+    padding:10px;
+    font-size: 20px;
+    box-sizing: border-box; /*размер элемента считается без margin*/
+}
+
+.auth-input input[type="submit"]:hover{
+    cursor: pointer;
+}
+.auth-input input[type="submit"]:focus{
+    background:#8056F7;
+}
+
+.auth-input input[type="submit"]{
+    border:none;
+    font-weight: bold;
+    margin-top:10px;
+    background:#9F56F7;
+}
+
+.auth-input input[type='text']:focus,
+.auth-input input[type='password']:focus{
+    border: 1px solid #c4145d;
+    color:#E1CFE1;
+}
+
+.auth-input p{
+    font-size:12px;
+}

@@ -1,0 +1,32 @@
+extends layout
+
+block content
+    div#settings-head
+        h1 Настройка аукциона
+    div#settings-div
+        div#settings
+            div#view-settings-mode
+                p#date-settings-label Дата аукциона:
+                p#time-settings-label Время аукциона:
+                p#timeout-settings-label Таймаут продажи картины:
+                p#interval-settings-label Интервал времени отсчета:
+                p#pause-settings-label Пауза на изучение картины:
+                div.div-button-settings
+                    input(type='button' value='Редактировать')#edit-settings-button
+            div#edit-settings-mode
+                form#form-edit-settings
+                    p Дата ауцкиона:
+                        input(type='date' name='date')#settings-input-date
+                    p Время аукиона:
+                        input(type='time' name='time_start')#settings-input-time
+                    p Таймаут продажи картины:
+                        input(type='time' name='timeout')#settings-input-timeout
+                    p Интервал времени отсчета:
+                        input(type='time' name='interval')#settings-input-interval
+                    p Пауза на изучение картины:
+                        input(type='time' name='pause')#settings-input-pause
+                    div.div-button-settings
+                        input(type='button' value='ОК' style='width:50%')#ok-settings-button
+                        input(type='button' value='Отмена' style='width:50%')#cancel-settings-button
+
+        script(src='../js/script.min.js')

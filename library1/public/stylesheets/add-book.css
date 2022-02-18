@@ -1,0 +1,42 @@
+.div-add-book{
+    padding:20px;
+    width:200px;
+    margin:auto;
+    text-align: center;
+    background: rgba(196,20,93,0.7);
+}
+
+.div-add-book input{
+    background: none;
+    color:white;
+    width: 100%;
+    box-sizing: border-box; /*размер элемента считается без margin*/
+    text-align: center;
+    margin:  5px 0 5px 0;
+    font-size:17px;
+}
+
+.div-add-book input[type='submit']:hover{
+    cursor: pointer;
+}
+
+.div-add-book input[type='submit']{
+    border:none;
+    font-weight: bold;
+    margin-top:10px;
+    background:#c4145d;
+}
+
+.div-add-book input[type='text']{
+    border:1px solid white
+}
+
+.div-add-book input[type='text']:focus{
+    border: 1px solid black;
+    color:#E1CFE1;
+}
+
+.div-add-book p{
+    color:white;
+    margin: 5px 0 5px 0;
+}

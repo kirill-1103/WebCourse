@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  script(src='../js/script.min.js')
+  div.picture-div
+    div.div-table
+      table.unselectable
+        thead
+          tr#main_row
+            th Картина
+            th Название
+            th.author Автор
+            th Начальная цена
+            th Участие в предстоящем аукционе
+      div.div-table-body.unselectable
+        table#body_table.body-table
+          tbody
+    div#div_add_new_picture.div_add
+      input(type='button' value='Добавить новую картину')#button_add_new_picture.button_add
+
+  include modal_picture
+

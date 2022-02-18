@@ -1,0 +1,47 @@
+@content-background-color:#fdfFCC;
+@border-table:2px solid #feac00;
+.offset(@padding:0,@margin:0){
+  padding:@padding;
+  margin:@margin;
+}
+.size(@height:auto,@width:auto){
+  height:@height;
+  width:@width;
+}
+.BLOCK(){
+  display: block;
+}
+.min_table_width{
+  min-width:600px;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+input[type='button']{
+  font-weight: bold;
+}
+
+body {
+  font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-color:@content-background-color;
+}
+
+a {
+  color: #00B7FF;
+}
+.unselectable{ /*запрет на выделение текста*/
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none;   /* Chrome/Safari/Opera */
+  -moz-user-select: none;      /* Firefox */
+  -ms-user-select: none;       /* Internet Explorer/Edge */
+  user-select: none;           /* Non-prefixed version, currently
+                                  not supported by any browser */
+}
+
+.content{
+  padding-top:80px;
+}
+

@@ -1,0 +1,637 @@
+{
+  "frames": {
+    "Player": {
+      "frame": {
+        "x": 8,
+        "y": 15,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 234,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 234,
+        "h": 58
+      }
+    },
+    "Enemy": {
+      "frame": {
+        "x": 393,
+        "y": 206,
+        "w": 38,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 456,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 456,
+        "h": 28
+      }
+    },
+    "PlayerRun1": {
+      "frame": {
+        "x": 8,
+        "y": 133,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 15,
+        "w": 40,
+        "h": 30
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 30
+      }
+    },
+    "PlayerRun2": {
+      "frame": {
+        "x": 87,
+        "y": 133,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 15,
+        "w": 40,
+        "h": 30
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 30
+      }
+    },
+    "PlayerRun3": {
+      "frame": {
+        "x": 166,
+        "y": 133,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 15,
+        "w": 40,
+        "h": 30
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 30
+      }
+    },
+    "PlayerRun4": {
+      "frame": {
+        "x": 242,
+        "y": 133,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 8,
+        "y": 15,
+        "w": 40,
+        "h": 30
+      },
+      "sourceSize": {
+        "w": 40,
+        "h": 30
+      }
+    },
+    "Attack (78x58)": {
+      "frame": {
+        "x": 79,
+        "y": 177,
+        "w": 234,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 234,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 234,
+        "h": 58
+      }
+    },
+    "PlayerFall": {
+      "frame": {
+        "x": 8,
+        "y": 192,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 58
+      }
+    },
+    "PlayerJump": {
+      "frame": {
+        "x": 322,
+        "y": 192,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 78,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 78,
+        "h": 58
+      }
+    },
+    "Run (78x58)": {
+      "frame": {
+        "x": 0,
+        "y": 118,
+        "w": 624,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 624,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 624,
+        "h": 58
+      }
+    },
+    "PlayerDead1": {
+      "frame": {
+        "x": 8,
+        "y": 74,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 58
+      }
+    },
+    "PlayerDead2": {
+      "frame": {
+        "x": 87,
+        "y": 74,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 58
+      }
+    },
+    "PlayerDead3": {
+      "frame": {
+        "x": 166,
+        "y": 74,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 58
+      }
+    },
+    "PlayerDead4": {
+      "frame": {
+        "x": 245,
+        "y": 74,
+        "w": 40,
+        "h": 30
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 58
+      }
+    },
+
+    "Dead (78x58)": {
+      "frame": {
+        "x": 0,
+        "y": 59,
+        "w": 312,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 58
+      }
+    },
+    "EnemyRun1": {
+      "frame": {
+        "x": 393,
+        "y": 177,
+        "w": 38,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 228,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 228,
+        "h": 28
+      }
+    },
+    "EnemyRun2": {
+      "frame": {
+        "x": 431,
+        "y": 177,
+        "w": 38,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 228,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 228,
+        "h": 28
+      }
+
+    },
+    "EnemyRun3": {
+      "frame": {
+        "x": 469,
+        "y": 177,
+        "w": 38,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 228,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 228,
+        "h": 28
+      }
+
+    },
+    "Run (38x28)": {
+      "frame": {
+        "x": 393,
+        "y": 177,
+        "w": 228,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 228,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 228,
+        "h": 28
+      }
+    },
+    "Idle (38x28)": {
+      "frame": {
+        "x": 393,
+        "y": 206,
+        "w": 456,
+        "h": 28
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 456,
+        "h": 28
+      },
+      "sourceSize": {
+        "w": 456,
+        "h": 28
+      }
+    },
+    "Bomb": {
+      "frame": {
+        "x": 640,
+        "y": 140,
+        "w": 20,
+        "h": 20
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 52,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 52,
+        "h": 56
+      }
+    },
+    "Bomb On (52x56)": {
+      "frame": {
+        "x": 626,
+        "y": 59,
+        "w": 208,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 208,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 208,
+        "h": 56
+      }
+    },
+    "Finish": {
+      "frame": {
+        "x": 678,
+        "y": 118,
+        "w": 32,
+        "h": 48
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 48
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 48
+      }
+    },
+    "BombBoom1":{
+      "frame": {
+        "x": 313,
+        "y": 59,
+        "w": 52,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 56
+      }
+    },
+    "BombBoom2":{
+      "frame": {
+        "x": 365,
+        "y": 59,
+        "w": 52,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 56
+      }
+    },
+    "BombBoom3":{
+      "frame": {
+        "x": 417,
+        "y": 59,
+        "w": 52,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 56
+      }
+    },
+    "BombBoom4":{
+      "frame": {
+        "x": 469,
+        "y": 59,
+        "w": 52,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 56
+      }
+    },
+    "Boooooom (52x56)": {
+      "frame": {
+        "x": 313,
+        "y": 59,
+        "w": 312,
+        "h": 56
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 312,
+        "h": 56
+      },
+      "sourceSize": {
+        "w": 312,
+        "h": 56
+      }
+    },
+    "Fire": {
+      "frame": {
+        "x": 744,
+        "y": 131,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "Coin": {
+      "frame": {
+        "x": 711,
+        "y": 118,
+        "w": 32,
+        "h": 32
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 32,
+        "h": 32
+      },
+      "sourceSize": {
+        "w": 32,
+        "h": 32
+      }
+    },
+    "Idle (78x58)": {
+      "frame": {
+        "x": 0,
+        "y": 0,
+        "w": 858,
+        "h": 58
+      },
+      "rotated": false,
+      "trimmed": false,
+      "spriteSourceSize": {
+        "x": 0,
+        "y": 0,
+        "w": 858,
+        "h": 58
+      },
+      "sourceSize": {
+        "w": 858,
+        "h": 58
+      }
+    }
+  },
+  "meta": {
+    "app": "https://www.leshylabs.com/apps/sstool/",
+    "version": "Leshy SpriteSheet Tool v0.8.4",
+    "image": "spritesheet.png",
+    "size": {
+      "w": 858,
+      "h": 235
+    },
+    "scale": 1
+  }
+}

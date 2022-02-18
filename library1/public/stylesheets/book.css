@@ -1,0 +1,50 @@
+.book{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+}
+
+.book-card{
+    color:#c4145d;
+    padding:10px;
+    background: #E1CFE1;
+    width: 400px;
+    font-style: inherit;
+}
+
+.book-card p{
+    font-size: 20px;
+}
+
+.book input[type='submit']{
+    width:100%;
+    background: #7B1FA2;
+    color:white;
+    font-size: 20px;
+    border:none;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+.book input{
+    background:none;
+    width: 100%;
+    color:#7B1FA2;
+    padding:10px;
+    font-size: 20px;
+    box-sizing: border-box;
+}
+
+.book span{
+     color:#310370;
+
+}
+
+.book input[type='submit']:hover{
+    cursor: pointer;
+}
+
+#book_edit{
+    display:none;
+}

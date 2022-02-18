@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GAME</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<!--<script>console.log(localStorage['player'])</script>-->
+    <div id="title-name"></div>
+    <div class="level">
+        <h2>Выберите уровень</h2>
+        <div class="form_radio_btn">
+             <input type="radio" id="r-level1" name="lvl" value="level1" checked onclick="onLvl1()">
+            <label for="r-level1">Level 1</label>
+        </div>
+        <div class="form_radio_btn">
+            <input type="radio" id="r-level2" name="lvl" value="level1" onclick="onLvl2()">
+            <label for="r-level2">Level 2</label>
+        </div>
+        <div class="form_radio_btn">
+            <button onclick = 'onPlay()' class="play">Play</button>
+        </div>
+        <div class="form_radio_btn">
+            <button onclick="onLogin()" class="play">Сменить имя</button>
+        </div>
+
+        </div>
+    <div class="records">
+        <h2>Таблица рекордов</h2>
+        <table id="table-records">
+            <tr>
+                <td>1</td>
+                <td id="name_1"></td>
+                <td id="score_1"></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td id="name_2"></td>
+                <td id="score_2"></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td id="name_3"></td>
+                <td id="score_3"></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td id="name_4"></td>
+                <td id="score_4"></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td id="name_5"></td>
+                <td id="score_5"></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td id="name_6"></td>
+                <td id="score_6"></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td id="name_7"></td>
+                <td id="score_7"></td>
+            </tr>
+            <tr>
+                <td>8</td>
+                <td id="name_8"></td>
+                <td id="score_8"></td>
+            </tr>
+            <tr>
+                <td>9</td>
+                <td id="name_9"></td>
+                <td id="score_9"></td>
+            </tr>
+            <tr>
+                <td>10</td>
+                <td id="name_10"></td>
+                <td id="score_10"></td>
+            </tr>
+        </table>
+    </div>
+<script type="text/javascript" src="./start.js"></script>
+
+
+</body>
+</html>

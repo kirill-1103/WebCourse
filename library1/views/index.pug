@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  div(id="div_login" class='div-auth')
+    h2(class='unselectable') ВХОД
+    form(action="/users/login" method="post")
+      div(class='auth-input')
+        input(name = "login" id="username" type="text" placeholder="Имя пользователя" )
+      br
+      div(class='auth-input')
+        input(name = "password" id="password" type="password" placeholder="Пароль")
+      br
+      div(class='auth-input ' )
+          input(type="submit" class = 'button-input' value='Войти')
+    //form(action="/users/signup" method="get")
+    //  div(class='auth-input')
+    //    input(type="submit" value='Зарегистрироваться')
+    if wrongPass
+      div(class='auth-input')
+        p(style = "color:red") Вы ввели неверное имя или пароль.
+
+

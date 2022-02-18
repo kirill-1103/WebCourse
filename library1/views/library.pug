@@ -1,0 +1,95 @@
+extends layout
+block content
+    -var val=-1;
+    link(rel='stylesheet' href='../stylesheets/table.css')
+    link(rel='stylesheet' href='../stylesheets/add-book.css')
+    div(class='books-div')
+        div(class='table-books-div')
+            table(class="books-table" id = 'books_table')
+                tr(id="main_row")
+                    th id
+                    th Название
+                    th Автор
+                    th В наличии
+                    th Дата выпуска
+                    th Дата возврата
+                for val in books
+                    div(class='row-div')
+                        tr(id = `${val.id}_book` class='right-click-area')
+                            td #{val.id}
+                            td #{val.name}
+                            td #{val.author}
+                            if val.in_stock === ''
+                                td Да
+                            else
+                                td Нет
+                            td #{val.date}
+                            if(val.date_back === '')
+                                td ---
+                            else
+                                td #{val.date_back}
+                        ul(class='right-click-menu' id='context_menu_'+val.id+"_book")
+                            li(id='li_delete' class='li_menuitem')
+                                button(class='button_menuitem' type='submit' onclick=`onDelete(${val.id})`) Удалить
+                        div(id='delete_modal_'+val.id style='display:none' class='mmm')
+                            div(class='sure' )
+                                span Вы уверены?
+                                form(method='post' action='/library/books/delete/' + val.id)
+                                    input(type='submit' value='Да' id='YES')
+                                input(type='submit' value='Нет' id='NO' onclick=`onNo(${val.id})`)
+                script(src="javascripts/library.js")
+            br
+            div(class='div-filter')
+                input(type='submit' onclick="all_books()" value='Все книги')
+                input(type='submit' onclick="in_stock()" value='В наличии')
+                input( type='submit' onclick='not_in_stock()' value='Срок сдачи')
+            script(src='javascripts/filter.js')
+            br
+            br
+            div(class = 'div-add-book' id="div_add_book" )
+                form(action="/library/books/new" method='post')
+                    input(id='text_add_name' name='name' type='text' placeholder='Название')
+                    br
+                    input(id='text_add_author' name="author" type='text' placeholder='Автор')
+                    br
+                    p Дата выпуска:
+                    input(id='text_add_date' name="date" type='date' placeholder='гггг-мм-дд')
+                    br
+                    input(id='button_add_book_in_lib' type='submit' value='Добавить книгу')
+
+            label(id="wrong_book_input" style='color:red')
+    if wrongBook === true
+        script.
+            let color = document.getElementById('text_add_name').style.backgroundColor;
+            document.getElementById('text_add_name').style.backgroundColor = "red";
+            document.getElementById('text_add_author').style.backgroundColor = "red";
+            document.getElementById('text_add_date').style.backgroundColor = "red";
+            document.getElementById('wrong_book_input').innerHTML = 'Неверно заполнены поля';
+            setTimeout(()=>{
+                document.getElementById('text_add_name').style.backgroundColor=color;
+                document.getElementById('text_add_author').style.backgroundColor = color;
+                document.getElementById('text_add_date').style.backgroundColor = color;
+                document.getElementById('wrong_book_input').innerHTML = '';
+            },3000)
+    //div.modal(style='display:none' id='delete_modal')
+    //    span Вы уверены?
+    //    //action="/library/books/delete/"+val.id method='post'
+    //    form(method='post' action='/library/books/delete/'+val)
+    //        input(type='submit' value='Да' id='YES')
+    //    input(type='submit' value='Нет' id='NO' onclick='onNo()')
+
+
+    script(src='javascripts/context_menu.js')
+
+    script.
+        function onNo(a){
+            document.getElementById("delete_modal_"+a).style.display='none';
+        }
+        function onDelete(a){
+            document.getElementById('delete_modal_'+a).style.display='block';
+        }
+
+
+
+
+
